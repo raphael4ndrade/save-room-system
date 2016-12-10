@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sistema de Reserva de Salas</title>
+        <meta charset="UTF-8">
+        
+        <script type="text/javascript" src="bower_components/angularjs.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+
+    </head>
+    <body ng-app="save-room-system">
+        <h1>Bem vindo ao Sistema de Reserva de Salas!</h1>
+        <nav>
+            <ul>
+                <li><a href="#/pessoa">Não tenho cadastro.(clique aqui!)</a></li>
+                <li><a href="#/">Reservas</a></li>
+                <li><a href="#/sala">Fazer uma reserva</a></li>
+            </ul>
+        </nav>
+        <div ng-view></div>
+        <script type="text/javascript" src="js/config.js"></script>
+    </body>
+</html>
