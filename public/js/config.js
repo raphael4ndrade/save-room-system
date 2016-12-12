@@ -5,7 +5,7 @@ angular
         $routeProvider.
             when("/", {
                 controller : "js/salaController",
-                templateUrl: "template/sala.html",
+                templateUrl: "template/salas.html",
                 controllerAs: "ctl"
             })
             when("/pessoa", {

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/raphael4ndrade/save-room-system#readme",
   "dependencies": {
+    "angular-route": "^1.6.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "knex": "^0.12.6",
