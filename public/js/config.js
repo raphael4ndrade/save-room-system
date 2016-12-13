@@ -1,22 +1,18 @@
 // config.js
-angular
-    .module("save-room-system", ["ngRoute"])
-    .config(($routeProvider) => {
-        $routeProvider.
-            when("/", {
-                controller : "js/salaController",
-                templateUrl: "template/salas.html",
+angular.module("save-room-system", ["ngRoute"]);
+
+angular.module("save-room-system").config(($routeProvider) => {
+        $routeProvider.when("/reservas", {
+                controller : "./js/salaController",
+                templateUrl: "../templates/reservas.html",
                 controllerAs: "ctl"
-            })
-            when("/pessoa", {
-                controller : "pessoaController",
-                templateUrl: "template/pessoa.html",
+            });
+        
+        $routeProvider.when("sala", {
+                controller : "./reservaController",
+                templateUrl: "../templates/salas.html",
                 controllerAs: "ctl"
-            })
-            when("sala", {
-                controller : "reservaController",
-                templateUrl: "template/reserva.html",
-                controllerAs: "ctl"
-            })
-            otherwise("/");
-    })
+            });
+
+        $routeProvider.otherwise("/reservas");
+    });

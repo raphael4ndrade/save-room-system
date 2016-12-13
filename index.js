@@ -9,14 +9,15 @@ app.use(bodyparse.json());
 
 // app routing...
 app.get("/room", (req, res) => {
-
+        knex("room").select().then((ret) => res.send(ret));
     })
     .get("/person", (req, res) =>{
-
+        knex("person").select().the((ret) => res.send(ret));
     })
     .post("/room", (req, res) => {
         let localdata = req.body;
         let notExist = knex("room").where("id_room", ret[0]);
+        console.log(notExist);
         knex("room").insert(localdata, "id_room").then((ret) => {
             localdata.id_room = ret[0];
             res.send(localdata);
@@ -27,11 +28,11 @@ app.get("/room", (req, res) => {
     })
     .post("/person", (req, res) => {
         let localdata = req.body;
-        knex("person").select()
+        // knex("person").select()
     })
     .post("/room_person", (req, res) => {
 
-    });
+});
 
 
 
