@@ -3,14 +3,14 @@ angular.module("save-room-system", ["ngRoute"]);
 
 angular.module("save-room-system").config(($routeProvider) => {
         $routeProvider.when("/reservas", {
-                controller : "./js/salaController",
-                templateUrl: "../templates/reservas.html",
+                controller : "js/salaController",
+                templateUrl: "templates/reservas.html",
                 controllerAs: "ctl"
             });
         
-        $routeProvider.when("sala", {
-                controller : "./reservaController",
-                templateUrl: "../templates/salas.html",
+        $routeProvider.when("/salas", {
+                controller : "reservaController",
+                templateUrl: "templates/salas.html",
                 controllerAs: "ctl"
             });
 

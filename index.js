@@ -18,6 +18,7 @@ app.get("/room", (req, res) => {
         let localdata = req.body;
         let notExist = knex("room").where("id_room", ret[0]);
         console.log(notExist);
+
         knex("room").insert(localdata, "id_room").then((ret) => {
             localdata.id_room = ret[0];
             res.send(localdata);
@@ -28,13 +29,26 @@ app.get("/room", (req, res) => {
     })
     .post("/person", (req, res) => {
         let localdata = req.body;
-        // knex("person").select()
+        knex("person").insert(localdata, "id_person").then( (ret) => {
+            localdata.id_person = ret[0];
+            res.send(localdata);
+        }).catch( (err) => {
+            res.status(500).send(err);
+            console.log(err);
+        });
     })
     .post("/room_person", (req, res) => {
-
+        let localdata = req.body;
+        knex("roo_person").insert({
+            id_room : localdata.id_room,
+            id_person : localdata.id_person
+        }).then( (ret) => {
+            res.send("OK!");
+        }).catch( (err) =>{
+            res.status(500).send(err);
+            console.log(err);
+        })
 });
-
-
 
 knex.migrate.latest().then( ()=> {
     app.listen(3000);
