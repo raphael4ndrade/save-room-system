@@ -1,24 +1,36 @@
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-3">
-        <form ng-submit="" class="form-horizontal" role="form">
-          <div class="form-group">
-            <div class="col-sm-8">
-              <input type="text" class="form-control" placeholder="Sala">
-            </div>
+<html><head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+  </head><body>
+    <div>
+      <form ng-submit="" class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="col-xs-2 col-sm-2 text-right">Sala</label>
+          <div class="col-xs-10 col-sm-10">
+            <input type="text" class="form-control" placeholder="ex. LMC1" required="">
           </div>
-          <div class="form-group">
-            <div class="col-sm-8">
-              <input type="text" class="form-control" placeholder="Descrição">
-            </div>
+        </div>
+        <div class="form-group">
+          <label class="col-xs-2 col-sm-2 text-right">Info</label>
+          <div class="col-xs-10 col-sm-10">
+            <textarea class="form-control" placeholder="Laboratório equipado com 4 computadores funcionais." type="text" required=""></textarea>
           </div>
-          <div class="form-group">
-            <div class="col-sm-8 text-center">
-              <button type="submit" class="btn btn-primary">Registrar</button>
-            </div>
+        </div>
+        <div class="form-group">
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Adicionar Sala</button>
           </div>
-        </form>
-      </div>
+          <br>
+        </div>
+      </form>
     </div>
-    <div ng-repeat="" class="row">
-      
-    </div>
+    <div class="container" ng-repeat=""></div>
+  
+
+</body></html>
