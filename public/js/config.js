@@ -14,9 +14,9 @@ angular.module("save-room-system").config(($routeProvider) => {
                 controllerAs: "ctl"
         });
 
-        $routeProvider.when("/registrar-usuario", {
+        $routeProvider.when("/cadastrar-usuario", {
             controller: "js/usuarioControler",
-            templateUrl: "templates/cadastro.html",
+            templateUrl: "templates/cadastrar-usuario.html",
             controllerAs: "ctl"
         });
 
